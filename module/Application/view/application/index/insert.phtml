@@ -11,9 +11,12 @@
     <?php echo $this->formRow($beerForm->get('img')); ?>
 </div>
 
+<!-- Verifica se existe id -->
 <?php if ($beerForm->has('id')): ?>
     <?php echo $this->formElement($beerForm->get('id')) ?>
 <?php endif;?>
+
+
 
 <?php echo $this->formElement($beerForm->get('send')) ?>
 

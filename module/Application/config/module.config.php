@@ -40,6 +40,32 @@ return array(
                     ),
                 ),
             ),
+            'deletar' => array(
+                'type' => 'Zend\Mvc\Router\Http\Segment',
+                'options' => array(
+                    'route'    => '/deletar/[:id]',
+                    'constraints' => array(
+                      'id' => '[0-9]+'
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'deletar',
+                    ),
+                ),
+            ),    
+            'editar' => array(
+                'type' => 'Zend\Mvc\Router\Http\Segment',
+                'options' => array(
+                    'route'    => '/editar/[:id]',
+                    'constraints' => array(
+                      'id' => '[0-9]+'
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Index',
+                        'action'     => 'insert',
+                    ),
+                ),
+            ), 
             // The following is a route to simplify getting started creating
             // new controllers and actions without needing to create a new
             // module. Simply drop new controllers in, and you can access them
